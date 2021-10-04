@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import propTypes from 'prop-types';
+import Habitacion from './Habitacion/Habitacion';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/*ejercicio 3*/
+
+Habitacion.propTypes={
+  camas: propTypes.number,
+  tieneTV: propTypes.bool,
+  tipoPlacard: propTypes.string,
+  reservadoPor: propTypes.string
+};
+
+
+/*ejercicio 4*/
+
+/*tengo que agregar props a MuestraCamas */
+
+
+// const reservas= {
+//   id: 1,
+//   name: "Fabricio"
+// };
+
+
+
+
+
+
+ReactDOM.render(<Habitacion />, document.getElementById("root"));
